@@ -1,16 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
+import Home from './pages/Home'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='min-h-screen bg-gray-900 flex justify-center items-center'>
-      <h1 className='text-4xl font-bold text-teal-400'>
-        Portfolio Robmar Definitivo
-      </h1>
+    <div className='min-h-screen flex flex-col bg-gray-900'>
+      <Navbar />
+      <main className='flex-grow'>
+        <Home />
+      </main>
+      
+      <Footer />
     </div>
   )
 }
